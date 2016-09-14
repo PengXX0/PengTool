@@ -1,0 +1,40 @@
+﻿@{Layout = null;}
+@{
+    ViewBag.Title = "汉字转拼音";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <fieldset>
+        <ol>
+            <li>
+                <label>贴入要转换汉字</label>
+                <textarea name="input" style="height: 230px"></textarea>
+            </li>
+            <li>
+                <hr />
+            </li>
+            <li>
+                <label>转换结果：</label>
+                <textarea name="result" style="height: 230px" readonly="readonly"></textarea>
+            </li>
+        </ol>
+    </fieldset>
+</section>
+<script type="text/javascript">
+    $(function () { $("textarea[name='input']").bind("input", pinyin.transform); });
+    var pinyin = {
+        transform: function () {
+            if (this.value.trim().length == 0) { return false; }
+            $.ajax({
+                cache: false,
+                type: "POST",
+                data: "content=" + this.value,
+                url: "/Pinyin/Index",
+                success: function (data) {
+                    $("textarea[name='result']").val(data);
+                }
+            });
+        }
+    };
+</script>
+

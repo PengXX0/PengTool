@@ -1,0 +1,16 @@
+﻿body {font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;}
+.wrapper{ min-width: 1250px;}
+p{ line-height: 8px;}
+ul, li{ list-style: none;margin: 0;padding: 0; }
+.menu {min-width:200px;max-width:300px;overflow-x: auto !important;overflow-y:scroll;float: left;position: fixed;}
+.menu li ul{ display: none;}
+.menu i{width: 20px;height: 20px;float: left;margin-right: 8px;}
+.menu li a{padding-left: 28px;white-space:nowrap; display: block;line-height: 30px;-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.menu a:focus,.menu a:hover{ text-decoration: none;border: hidden;}
+.menu a:hover{ background: #ddd;}
+.menu li a.active{color: #fff;background-color: #337ab7;}
+.menu li>ul{ padding-left: 15px;}
+.menu .icon-close {background: url("../images/icons.png") no-repeat 6px -15px;}
+.menu .icon-open{background: url("../images/icons.png") no-repeat 6px 4px;}
+.main-content {float: right;}
+.col-md-9{ min-width: 900px;}

@@ -1,0 +1,53 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.jf-ObjectBrace {
+    color: #00AA00;
+    font-weight: bold;
+}
+.jf-ArrayBrace {
+    color: #0033FF;
+    font-weight: bold;
+}
+.jf-collapsWrapper{
+    cursor:pointer;    
+    width: 40px;
+    display: inline-block;
+}
+.jf-PropertyName {
+    color: #CC0000;
+    font-weight: bold;
+}
+.jf-String {
+    color: #007777;
+}
+.jf-Number {
+    color: #AA00AA;
+}
+.jf-Boolean {
+    color: #0000FF;
+}
+.jf-Null {
+    color: #0000FF;
+}
+.jf-Comma {
+    color: #000000;
+    font-weight: bold;
+}
+pre.jf-CodeContainer {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-size:13px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+pre i {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border-width: 5px;
+    border-style: solid;
+    cursor:pointer;
+}
+.expanded {margin: 0px 0px -5px 1px;border-color: #666 transparent transparent transparent;}
+.collapsed {margin: 0px 0px -2px 4px;border-color: transparent transparent transparent #666;}

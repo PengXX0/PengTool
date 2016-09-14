@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "JSON在线格式化";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="test-result">
+    <fieldset>
+        <ol>
+            <li>
+                <label>JSON</label>
+                <textarea name="input" style="height: 230px;">
+                    {"Code": 200,"Massage": "获取数据成功","Data": { "crowdView": {"UserId": 17,                    "NickName": "ko2223uta0221",                    "UserName": "kouta0221",                    "Avatar": "",                    "SupportedCount": 0,                    "TargetAmount": 1000,                    "RaisedAmount": 0,                    "Id": 30,                    "StatusId": 4,                    "HtmlDescription": "",                    "Name": "wtyyuii",                    "Profile": "阿道夫发点三十分",                    "Content": "狮子花花世界和大好河山",                    "RemainDays": 0,                    "ShowStatus": "失败",                    "Images": "http://img.niuduz.com/MoChouJun/Photo/2016/02/17/big/bcf53d44-3c1d-4da9-9b1c-47b6bf23f36b.png",                    "Audios": "",                    "RepayCount": 0,                    "AddContent": "",                    "AddHtmlDescription": "",                    "isExistRepayWay": 0                    },                    "supports": [ ],                    "group": {                    "GroupId": 9,                    "EasemobGroupId": "163761911437984224",                    "UserId": 17,                    "Avatar": "",                    "CrowdFundId": 30,                    "GroupName": "wtyyuii",                    "CreateDate": "2016/2/17 15:19:52"                    },                    "repayCount": 0,                    "commentList": [ ],                    "isSupported": 0,                    "repaysList": {                    "customerRepay": { },                    "repayList": [ ]                    }                    }                    }               
+            </textarea>
+            </li>
+            <li>
+                <input type="button" value="格式化" class="format" />&nbsp;&nbsp;
+                缩进
+                <input type="radio" name="tab" class="tab" value="2">
+                2 &nbsp;
+                <input type="radio" name="tab" class="tab" value="4" checked>
+                4 &nbsp;&nbsp;
+                <input type="checkbox" name="quoteKeys" class="quoteKeys" checked><span for="quoteKeys">引号</span>
+                &nbsp;&nbsp;
+                <input type="checkbox" name="collapsible-view" class="collapsible-view" checked><span for="collapsible-view">显示控制</span>&nbsp;&nbsp;
+                <a href="javascript:;" class="expandAll">展开</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="collapseAll">叠起</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="3">2级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="4">3级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="5">4级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="6">5级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="7">6级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="8">7级</a>&nbsp;&nbsp;
+                <a href="javascript:;" class="expand" data-level="9">8级</a>
+            </li>
+            <li>
+                <div class="result"></div>
+            </li>
+        </ol>
+    </fieldset>
+</section>

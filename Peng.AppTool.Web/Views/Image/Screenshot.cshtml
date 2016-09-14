@@ -1,0 +1,26 @@
+﻿@{ ViewBag.Title = "网页截屏"; Layout = "~/Views/Shared/_Layout.cshtml";}
+@*@Styles.Render("~/Content/bootstrap/")
+    <script src="~/Scripts/modal.js"></script>*@
+<h2>网页截屏</h2>
+<input type="text" class="url" />
+<input type="button" value="提 交" class="submit" data-loading-text="loading" />
+<div class="panel"></div>
+<script type="text/javascript">
+    $(function () {
+        $(".submit").bind("click", function () {
+            var that = this;
+            $.ajax({
+                beforeSend: function () { $(that).button("loading"); },
+                complete: function () { $(that).button("reset"); },
+                url: "/Image/Screenshot",
+                data: "url=" + $(".url").val(),
+                type: "POST",
+                success: function (data) {
+                    $(".panel").html("<image src=" + data.Data + "/>");
+                    alert(data.Message);
+                    //modal.alert({ content: data.Message, type: "success", cancel: "确定" });
+                }
+            });
+        });
+    });
+</script>

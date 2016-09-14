@@ -1,0 +1,1 @@
+﻿<input type='hidden' id='i' /><div id='m' style='width: {0}px; height: {1}px;'></div><script>{ 2 } function run(o) { { var myChart = echarts.init(document.getElementById('m')); myChart.setOption(eval('(' + o + ')')); document.getElementById('i').value = myChart.getDataURL('png'); } };</script>

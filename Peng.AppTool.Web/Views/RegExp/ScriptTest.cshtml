@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "JavaScript正则表达式在线测试";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="test-result">
+    <fieldset>
+        <legend></legend>
+        <ol>
+            <li>
+                <label>JScript正则表达式</label>
+                (<a href="~/RegExp/Document" target="_blank">查看文档</a>)
+                <textarea name="pattern">/^1(3|5|7|8{1})\d{9}$/g</textarea>
+            </li>
+            <li>
+                <label>输入文本</label>
+                <textarea name="input">17004961261</textarea>
+            </li>
+            <li>
+                <input type="button" value="验 证" class="submit" />
+            </li>
+            <li>
+                <textarea name="result"></textarea></li>
+            <li>
+                <table class="hidden" style="width: 100%">
+                    <tr>
+                        <th style="width: 10%">Index
+                        </th>
+                        <th style="width: 10%">Length
+                        </th>
+                        <th>Value
+                        </th>
+                    </tr>
+                </table>
+            </li>
+        </ol>
+    </fieldset>
+</section>
+<script type="text/javascript">
+</script>

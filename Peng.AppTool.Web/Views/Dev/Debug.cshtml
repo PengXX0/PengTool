@@ -1,0 +1,20 @@
+﻿@using Peng.AppTool.Web.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Debug</title>
+</head>
+<body>
+    <div>
+        @Html.DropDownList("Conuntry", Enum.GetValues(typeof(Country)).Cast<Country>().Select(m => new SelectListItem { Text = Enum.GetName(typeof(Country), m), Value = ((int)m).ToString() }))
+        @Html.DropDownList("Conuntry", EnumExt.ToListItem<Country>())
+        @Html.DropDownList("Conuntry", typeof(Country))
+    </div>
+</body>
+</html>

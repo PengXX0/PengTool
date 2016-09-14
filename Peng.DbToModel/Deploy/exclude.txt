@@ -1,0 +1,4 @@
+﻿
+.pdb
+.manifest
+vshost

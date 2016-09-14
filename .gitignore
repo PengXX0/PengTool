@@ -1,0 +1,10 @@
+T4GeneratModelUtils
+TestResults
+packages
+obj
+App_Logs
+bin
+/Peng.AppTool.Web/App_Data/aspnet-Pengxsoft.AppTool.Web-20150520103830.mdf
+/Peng.AppTool.Web/App_Data/aspnet-Pengxsoft.AppTool.Web-20150520103830_log.ldf
+/Peng.AppTool.Web/App_Log
+/Peng.DbToModel/Models

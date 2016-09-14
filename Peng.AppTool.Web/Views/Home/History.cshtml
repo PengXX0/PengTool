@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "History";
+}
+<script src="~/Scripts/jquery.cookie.js"></script>
+<section class="test-result">
+    <fieldset>
+        <ol>
+            <li>
+                <table></table>
+            </li>
+        </ol>
+    </fieldset>
+</section>
+<script type="text/javascript">
+    var head = "<tr><th>title</th><th>url</th><th>time</th></tr>"
+    var template = "<tr><td>{title}</td><td>{url}</td><td>{time}</td></tr>";
+    var bhistory = $.cookie("history");
+    if (!bhistory) { bhistory = []; }
+    $("table").html(head + template.render(bhistory));
+</script>

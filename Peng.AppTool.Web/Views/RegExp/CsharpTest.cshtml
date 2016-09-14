@@ -1,0 +1,42 @@
+﻿@model Peng.AppTool.Web.Models.RegExpModels
+@{
+    ViewBag.Title = "C#正则表达式在线测试";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="test-result">
+    <fieldset>
+        <form class="csharp-Rex">
+            <ol>
+                <li>
+                    <label>C#正则表达式</label>
+                    (@Html.ActionLink("查看文档", "Document", null, new { target = "_blank" }))
+                <textarea name="pattern">^data:image\/+(gif|png|jpg|jpeg+);base64,([a-z,A-Z,0-9,/,+,=,\s]+)$</textarea>
+                </li>
+                <li>
+                    <label>输入文本</label>
+                    <textarea name="input">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQCAYAAAByNR6YAAAgAElEQVR4XuydC3xcRdn/n2d2cylNSovcQS0geCnQkN1NE4oSQOtd24LKqxYKWBCFpkDLzQKBYkUokLaKUm7lpqhQir76eie+EtJ2d9NWqf4FQS4v13Jpm5bmd</textarea>
+                </li>
+                <li>
+                    <input type="button" value="验 证" class="submit" />
+                </li>
+                <li>
+                    <table class="hidden" style="width: 100%">
+                        <tr>
+                            <th style="width: 10%">Index
+                            </th>
+                            <th style="width: 10%">Success
+                            </th>
+                            <th style="width: 10%">Length
+                            </th>
+                            <th>Value
+                            </th>
+                        </tr>
+                    </table>
+                </li>
+            </ol>
+        </form>
+    </fieldset>
+</section>
+<script type="text/javascript">
+   
+</script>

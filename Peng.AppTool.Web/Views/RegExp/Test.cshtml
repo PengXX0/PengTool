@@ -1,0 +1,55 @@
+﻿@model Pengxsoft.AppTool.Web.Models.RegExpModels
+@{
+    ViewBag.Title = "C#正则表达式在线测试";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="test-result">
+    <fieldset>
+        <ol>
+            <li>
+                <label>C#正则表达式</label> (@Html.ActionLink("查看文档", "Document", null, new { target = "_blank" }))
+                <textarea name="pattern">^data:image\/+(gif|png|jpg|jpeg+);base64,([a-z,A-Z,0-9,/,+,=,\s]+)$</textarea>
+            </li>
+            <li>
+                <label>输入文本</label>
+                <textarea name="input">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQCAYAAAByNR6YAAAgAElEQVR4XuydC3xcRdn/n2d2cylNSovcQS0geCnQkN1NE4oSQOtd24LKqxYKWBCFpkDLzQKBYkUokLaKUm7lpqhQir76eie+EtJ2d9NWqf4FQS4v13Jpm5bmd</textarea>
+            </li>
+            <li>
+                <input type="button" value="验 证" class="submit" />
+            </li>
+            <li>
+                <table class="hidden" style="width:99%">
+                    <tr>
+                        <th style="width:10%">
+                            Index
+                        </th>
+                        <th style="width:10%">
+                            Success
+                        </th>
+                        <th style="width:10%">
+                            Length
+                        </th>
+                        <th>
+                            Value
+                        </th>
+                    </tr>
+                </table>
+            </li>
+        </ol>
+    </fieldset>
+</section>
+<script type="text/javascript">
+    $(".submit").bind("click", function () {
+        var formData = "pattern={0}&input={1}".format(new Array($("textarea[name='pattern']").val(), $("textarea[name='input']").val()));
+        var template = "<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td></tr>";
+        $.post("/RegExp/Test", formData, function (data) {
+            var html = "";
+            for (var i = 1; i < data.Data.length; i++) {
+                html += template.format(new Array(data.Data[i].Index, data.Data[i].Success, data.Data[i].Length, data.Data[i].Value));
+            }
+            $("section li>table tr:gt(0)").remove();
+            $("section li>table").append(html).show();
+        });
+    });
+
+</script>
